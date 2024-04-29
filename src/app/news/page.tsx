@@ -3,15 +3,17 @@ import CategoryCards from "@/partials/home/CategoryCards";
 import Subscribe from "@/partials/home/Subscribe";
 import { IBlogs, IResponse } from "@/types/types";
 import { Fragment } from "react";
-import { API_URL } from "@/lib/config";
+import request from "@/lib/request";
 
 const getNewBlogs = async () => {
-  const response = await fetch(`${API_URL}/blog/latest`, {
+  const response = await request("/blog/latest", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
     },
-  });
+    cache: "force-cache",
+  })
+
   const data: IResponse = await response.json();
   const blogs: IBlogs[] = data.data;
   return blogs;

@@ -8,16 +8,16 @@ import H2 from "@/components/H2";
 import Image from "next/image";
 import { IBlog, IResponse } from "@/types/types";
 import { Metadata } from "next";
-import { API_URL } from "@/lib/config";
+import request from "@/lib/request";
 
 const getBlogDetail = async (slug: string) => {
-  const response = await fetch(`${API_URL}/blog/slug/${slug}`, {
+  const response = await request(`/blog/slug/${slug}`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
     },
     cache: "force-cache",
-  });
+  })
 
   const result: IResponse = await response.json();
   return result.data as IBlog;
@@ -69,19 +69,20 @@ const AricleDetailPage = async ({ params }: { params: { slug: string } }) => {
             </span>
           </p>
         </div>
-        <div className="flex flex-col gap-10 w-[1021px] mx-auto">
-          <div className="relative">
+        <div className="flex flex-col gap-10 w-[1021px]  mx-auto">
+          <div className="relative w-[1021px] h-[550px]">
             <Image
-              width={1021}
-              height={580}
+              fill
+              quality={85}
               src={blog.blogImage}
-              className="mx-auto w-[1021px] h-auto object-cover rounded-lg"
+              className="mx-auto  object-cover rounded-lg"
               alt="post main image"
             />
             <div className="absolute top-0 -left-16">
               <Image
                 width={45}
                 height={45}
+                quality={70}
                 src={blog.author.authorAvatar}
                 className="mx-auto w-[45px] h-[45px] object-cover rounded-lg"
                 alt="post main image"

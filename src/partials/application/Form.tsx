@@ -1,7 +1,7 @@
 "use client";
 
 import { Fragment, useState } from "react";
-import { API_URL } from "@/lib/config";
+import request from "@/lib/request";
 
 const Form = () => {
   const [loading, setLoading] = useState(false);
@@ -13,17 +13,20 @@ const Form = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     setLoading(true);
+
     e.preventDefault();
     const formData = new FormData(e.target as HTMLFormElement);
 
     try {
-      const response = await fetch(`${API_URL}/appeal`, {
+
+      const response = await request("/appeal", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(Object.fromEntries(formData)),
-      });
+      })
+
       // @ts-ignore
       const result = await response.json();
 
@@ -54,9 +57,8 @@ const Form = () => {
     <Fragment>
       {response && response.message !== "" ? (
         <div
-          className={`${
-            response.isSuccess ? "bg-green" : "bg-red"
-          } p-3 rounded-xl mt-2 text-white`}
+          className={`${response.isSuccess ? "bg-green" : "bg-red"
+            } p-3 rounded-xl mt-2 text-white`}
         >
           <p>{response.message}</p>
         </div>
@@ -120,9 +122,8 @@ const Form = () => {
           </div>
 
           <div
-            className={`my-2  rounded-lg ${
-              loading ? "bg-green/70" : "bg-green"
-            }`}
+            className={`my-2  rounded-lg ${loading ? "bg-green/70" : "bg-green"
+              }`}
           >
             <button
               disabled={loading}

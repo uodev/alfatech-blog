@@ -34,6 +34,7 @@ const OurWork = () => {
                 <Image
                   width={50}
                   height={50}
+                  quality={70}
                   src={ItemSatis}
                   alt="İtem Satış"
                   className="w-[30px] h-[30px]"
@@ -51,6 +52,7 @@ const OurWork = () => {
                 <Image
                   width={40}
                   height={40}
+                  quality={70}
                   src={ItemPazar}
                   alt="İtem Pazar"
                   className=""
@@ -68,6 +70,7 @@ const OurWork = () => {
                 <Image
                   src={AlfaPms}
                   alt="Alfa PMS"
+                  quality={70}
                   className="w-[30px] h-[30px]"
                   width={40}
                   height={40}

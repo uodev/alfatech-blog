@@ -2,16 +2,16 @@ import H1 from "@/components/H1";
 import LargeCategoryCard from "@/components/LargeCategoryCard";
 import { Category, IResponse } from "@/types/types";
 import { Fragment } from "react";
-import { API_URL } from "@/lib/config";
+import request from "@/lib/request";
 
 const getCategories = async () => {
-  const response = await fetch(`${API_URL}/category`, {
+  const response = await request("/category", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
     },
     cache: "force-cache",
-  });
+  })
   const result: IResponse = await response.json();
   return result.data as Category[];
 };

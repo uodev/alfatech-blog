@@ -3,7 +3,7 @@
 import H1 from "@/components/H1";
 import H4 from "@/components/H4";
 import { useState } from "react";
-import { API_URL } from "@/lib/config";
+import request from "@/lib/request";
 
 const Subscribe = () => {
   const [error, setError] = useState<string | null>(null);
@@ -29,11 +29,8 @@ const Subscribe = () => {
       return;
     }
 
-    const response = await fetch(`${API_URL}/subscribe`, {
+    const response = await request("/subscribe", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
       body: JSON.stringify({ email }),
     });
 

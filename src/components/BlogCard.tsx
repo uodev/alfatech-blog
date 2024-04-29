@@ -25,11 +25,13 @@ const BlogCard = ({ blog }: { blog: Blog }) => {
         className="!no-underline"
       >
         <Image
-          className="rounded-lg object-cover max-lg:w-[780px] min-h-[410px] max-h-[410px]"
+          className="rounded-lg object-cover max-lg:w-[780px] "
           src={blog.blogImage}
           alt="post"
           width={780}
           height={410}
+          quality={75}
+          priority
         />
         <div className="mt-5 flex flex-col gap-3 w-fit">
           <p className="text-base">
