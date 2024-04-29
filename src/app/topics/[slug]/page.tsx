@@ -4,10 +4,11 @@ import CategoryCards from "@/partials/home/CategoryCards";
 import Subscribe from "@/partials/home/Subscribe";
 import { IBlogs, IResponse } from "@/types/types";
 import { Fragment } from "react";
-import { API_URL } from "@/lib/config";
+import request from "@/lib/request";
 
 const getTopicBlogs = async (slug: string) => {
-  const response = await fetch(`${API_URL}/category/${slug}`, {
+
+  const response = await request(`/category/${slug}`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
