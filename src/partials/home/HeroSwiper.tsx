@@ -46,7 +46,7 @@ const HeroSwiper = ({ firstBlog, secondBlog, thirdBlog }: Props) => {
                 <SwiperSlide><HeroBlogCard blog={secondBlog} /></SwiperSlide>
                 <SwiperSlide><HeroBlogCard blog={thirdBlog} /></SwiperSlide>
             </Swiper>
-            <div className='bg-orange text-white p-4 w-fit flex gap-4 absolute bottom-20 z-10 right-20'>
+            <div className='bg-red rounded-md text-white p-4 w-fit flex gap-4 absolute bottom-20 z-10 right-20'>
                 <div className="prev-arrow cursor-pointer" onClick={handlePrev} >
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
