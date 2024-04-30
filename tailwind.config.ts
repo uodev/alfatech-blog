@@ -43,6 +43,8 @@ const config: Config = {
       },
       fontFamily: {
         "Open-Sans": ["Open Sans", "sans-serif"],
+        "Poppins": ["Poppins", "sans-serif"],
+        "Source-Sans-Pro": ["Source Sans 3", "sans-serif"],
       },
     },
   },

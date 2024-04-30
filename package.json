@@ -16,7 +16,8 @@
     "nextjs-toploader": "^1.6.12",
     "react": "^18",
     "react-dom": "^18",
-    "sharp": "^0.33.3"
+    "sharp": "^0.33.3",
+    "swiper": "^11.1.1"
   },
   "devDependencies": {
     "@iconify/react": "^4.1.1",
