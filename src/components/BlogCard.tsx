@@ -39,7 +39,7 @@ const BlogCard = ({ blog }: { blog: Blog }) => {
       </div>
       <div className="flex flex-col gap-5">
         <H3 text={blog.blogTitle} className="w-[330px] text-[#2d4044]" />
-        <p className="text-[#191919] font-medium tracking-[2px] text-xs">
+        <p className="text-[#191919] font-medium tracking-[2px] w-[330px] text-xs">
           <span className="text-passive">BY</span>{" "}
           <span className="dark:text-white text-black ">
             {blog.author.authorFullName}
@@ -49,7 +49,7 @@ const BlogCard = ({ blog }: { blog: Blog }) => {
             {blog.category.categoryName}
           </span>
         </p>
-        <H5 className="text-[#3a3a3a] text-sm font-normal z-10 font-Open-Sans" isHtml text={`${blog.blogContent}...`} />
+        <H5 className="text-[#3a3a3a] text-sm font-normal z-10 font-Open-Sans w-[330px]" isHtml text={`${blog.blogContent}...`} />
         <div className="relative flex gap-3 uppercase items-center text-[#ff4f69] text-xs hover:cursor-pointer group w-[95px]">
           <p className="tracking-wider font-[500] ">Read More </p>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-3 h-3 transition-transform transform translate-x-0 group-hover:translate-x-2 absolute right-0 ">
