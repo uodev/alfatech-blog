@@ -18,19 +18,18 @@ const Form = () => {
     const formData = new FormData(e.target as HTMLFormElement);
 
     try {
-
-      const response = await request("/appeal", {
+      const response = await request("/applications", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(Object.fromEntries(formData)),
-      })
+      });
 
       // @ts-ignore
       const result = await response.json();
 
-      if (result.isSuccess) {
+      if (result.statusCode === 201) {
         setResponse({
           message:
             "Başvurunuz başarıyla alınmıştır. En kısa sürede dönüş yapılacaktır.",
@@ -38,7 +37,7 @@ const Form = () => {
         });
       } else {
         setResponse({
-          message: "Başvurunuz alınamadı. Lütfen tekrar deneyiniz.",
+          message: result.message || "Başvurunuz alınamadı.",
           isSuccess: false,
         });
       }
@@ -57,8 +56,9 @@ const Form = () => {
     <Fragment>
       {response && response.message !== "" ? (
         <div
-          className={`${response.isSuccess ? "bg-green" : "bg-accent"
-            } p-3 rounded-xl mt-2 text-white`}
+          className={`${
+            response.isSuccess ? "bg-green" : "bg-accent"
+          } p-3 rounded-xl mt-2 text-white`}
         >
           <p>{response.message}</p>
         </div>
@@ -72,10 +72,7 @@ const Form = () => {
         <div className="flex flex-col space-y-2 bg-gray-800/40 p-10 mx-auto mt-5 rounded-lg w-1/2">
           <div className="grid grid-cols-1 gap-5 mt-5">
             <div>
-              <label
-                className="text-white font-semibold"
-                htmlFor="fullName"
-              >
+              <label className="text-white font-semibold" htmlFor="fullName">
                 Full Name
               </label>
               <input
@@ -122,8 +119,9 @@ const Form = () => {
           </div>
 
           <div
-            className={`my-2  rounded-lg ${loading ? "bg-accent/70" : "bg-accent"
-              }`}
+            className={`my-2  rounded-lg ${
+              loading ? "bg-accent/70" : "bg-accent"
+            }`}
           >
             <button
               disabled={loading}

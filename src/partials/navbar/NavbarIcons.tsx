@@ -77,7 +77,7 @@ const NavbarIcons = () => {
             />
           </svg>
 
-          <div className="invisible absolute z-50 flex flex-col -bottom-32 rounded-lg right-0  shadow-xl group-hover:visible  w-52 h-10 rounded-lg items-center justify-center">
+          <div className="invisible absolute z-50 flex flex-col -bottom-32 rounded-lg right-0  shadow-xl group-hover:visible  w-52 h-10 items-center justify-center">
             <div
               onClick={() => handleTheme("hallowen")}
               className="bg-white dark:bg-gray-800/40 w-full h-full flex items-center justify-center p-1"
