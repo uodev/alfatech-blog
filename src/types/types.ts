@@ -9,18 +9,18 @@ export interface IBlogs {
   blogContent: string;
   blogImage: string;
   author: {
-    authorFullName: string;
+    fullname: string;
     authorAvatar: string;
     authorSlug: string;
   };
   category: {
-    categoryName: string;
+    name: string;
   };
 }
 
 export interface IResponse {
   message: string;
-  isSuccess: boolean;
+  statusCode: number;
   data: any;
 }
 

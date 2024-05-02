@@ -9,10 +9,10 @@ interface Blog {
   blogTitle: string;
   blogContent: string;
   category: {
-    categoryName: string;
+    name: string;
   };
   author: {
-    authorFullName: string;
+    fullname: string;
   };
 }
 
@@ -37,11 +37,11 @@ const BlogCard = ({ blog }: { blog: Blog }) => {
           <p className="text-base">
             <span className="text-passive">BY</span>{" "}
             <span className="dark:text-white text-black ">
-              {blog.author.authorFullName}
+              {blog.author.fullname}
             </span>{" "}
             <span className="text-passive">IN</span>{" "}
             <span className="dark:text-white text-black ">
-              {blog.category.categoryName}
+              {blog.category.name}
             </span>
           </p>
           <H3 text={blog.blogTitle} />

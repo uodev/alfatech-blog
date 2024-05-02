@@ -6,15 +6,16 @@ import { Fragment } from "react";
 import request from "@/lib/request";
 
 const getNewBlogs = async () => {
-  const response = await request("/blog/latest", {
+  const response = await request("/blogs/newest", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
     },
     cache: "force-cache",
-  })
+  });
 
   const data: IResponse = await response.json();
+
   const blogs: IBlogs[] = data.data;
   return blogs;
 };

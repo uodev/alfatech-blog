@@ -6,12 +6,11 @@ import { Fragment } from "react";
 import request from "@/lib/request";
 
 const getBlogs = async () => {
-  const response = await request("/blog/most-viewed", {
+  const response = await request("/blogs/most-view", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
     },
-    cache: "force-cache",
   })
   const data: IResponse = await response.json();
   const blogs: IBlogs[] = data.data;
