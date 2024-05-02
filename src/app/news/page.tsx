@@ -4,6 +4,7 @@ import Subscribe from "@/partials/home/Subscribe";
 import { IBlogs, IResponse } from "@/types/types";
 import { Fragment } from "react";
 import request from "@/lib/request";
+import HeroSwiper from "@/partials/home/HeroSwiper";
 
 const getNewBlogs = async () => {
   const response = await request("/blogs/newest", {
@@ -22,11 +23,16 @@ const getNewBlogs = async () => {
 
 const NewsPage = async () => {
   const blogs = await getNewBlogs();
+  const firstBlog = blogs[0];
+  const secondBlog = blogs[1];
+  const thirdBlog = blogs[2];
+  const restBlogs = blogs.slice(3);
   return (
     <Fragment>
-      <section className="grid grid-cols-2 gap-10 max-lg:grid-cols-1">
-        {blogs.length > 0 &&
-          blogs.map((blog, index) => (
+      <HeroSwiper firstBlog={firstBlog} secondBlog={secondBlog} thirdBlog={thirdBlog} />
+      <section className="grid grid-cols-3 w-full mt-10 gap-10 max-lg:grid-cols-1">
+        {restBlogs.length > 0 &&
+          restBlogs.map((blog, index) => (
             <Fragment key={index}>
               <BlogCard blog={blog} />
             </Fragment>

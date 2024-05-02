@@ -11,12 +11,11 @@ import { Metadata } from "next";
 import request from "@/lib/request";
 
 const getBlogDetail = async (slug: string) => {
-  const response = await request(`/blog/slug/${slug}`, {
+  const response = await request(`/blogs/${slug}`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
     },
-    cache: "force-cache",
   })
 
   const result: IResponse = await response.json();
@@ -61,11 +60,11 @@ const AricleDetailPage = async ({ params }: { params: { slug: string } }) => {
           <p className="text-base">
             <span className="text-passive">BY</span>{" "}
             <span className="text-black dark:text-white">
-              {blog.author.authorFullName}
+              {blog.author.fullname}
             </span>{" "}
             <span className="text-passive">IN</span>{" "}
             <span className="text-black dark:text-white">
-              {blog.category.categoryName}
+              {blog.category.name}
             </span>
           </p>
         </div>
@@ -83,7 +82,7 @@ const AricleDetailPage = async ({ params }: { params: { slug: string } }) => {
                 width={45}
                 height={45}
                 quality={70}
-                src={blog.author.authorAvatar}
+                src={blog.author.avatar}
                 className="mx-auto w-[45px] h-[45px] object-cover rounded-lg"
                 alt="post main image"
               />
@@ -102,7 +101,7 @@ const AricleDetailPage = async ({ params }: { params: { slug: string } }) => {
                 ></path>
               </svg>
               <p className="text-black dark:text-white font-bold">
-                {blog.view}
+                {blog.blogView}
               </p>
             </div>
           </div>
@@ -124,10 +123,10 @@ const AricleDetailPage = async ({ params }: { params: { slug: string } }) => {
               blogSlug: "how-to-reinstall-wordpress",
               blogImage: "/images/post_1.png",
               author: {
-                authorFullName: "Uygar Öztürk Ceylan",
+                fullname: "Uygar Öztürk Ceylan",
               },
               category: {
-                categoryName: "DESIGN PROCESS",
+                name: "DESIGN PROCESS",
               },
               blogContent:
                 "User research is the reality check every project needs. Here’s our guide to why you should be doing it — and how to get started.",
@@ -140,10 +139,10 @@ const AricleDetailPage = async ({ params }: { params: { slug: string } }) => {
               blogSlug: "web-page-layout-101",
               blogImage: "/images/post_2.png",
               author: {
-                authorFullName: "Onur Yücel",
+                fullname: "Onur Yücel",
               },
               category: {
-                categoryName: "DESIGN PROCESS",
+                name: "DESIGN PROCESS",
               },
               blogContent:
                 "User research is the reality check every project needs. Here’s our guide to why you should be doing it — and how to get started.",

@@ -37,12 +37,13 @@ export interface IBlog {
   blogContent: string;
   blogImage: string;
   author: {
-    authorFullName: string;
-    authorAvatar: string;
+    fullname: string;
+    avatar: string;
     authorSlug: string;
   };
   category: {
-    categoryName: string;
+    name: string;
   };
-  view: number;
+  blogView: number;
+  blogPreface: string;
 }

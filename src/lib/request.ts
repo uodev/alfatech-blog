@@ -6,6 +6,7 @@ const request = async (url: string, options: RequestInit = {}): Promise<Response
         headers: {
             "Content-Type": "application/json",
         },
+        cache: "no-cache",
     });
     return response;
 };

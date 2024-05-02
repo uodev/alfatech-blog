@@ -5,7 +5,7 @@ import { Fragment } from "react";
 import request from "@/lib/request";
 
 const getCategories = async () => {
-  const response = await request("/category", {
+  const response = await request("/categories", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",

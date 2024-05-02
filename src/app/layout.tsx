@@ -27,7 +27,7 @@ export default function RootLayout({
         className={`bg-background dark:bg-dark-background ${darkMode.value}`}
       >
         <NextTopLoader color="#FF5480" />
-        <div className="w-[1200px] max-xl:w-[900px] m-auto min-h-[100vh]">
+        <div className="w-[1450px] max-xl:w-[900px] m-auto min-h-[100vh]">
           <Navbar />
           <main>{children}</main>
         </div>

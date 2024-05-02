@@ -8,7 +8,7 @@ import request from "@/lib/request";
 
 const getTopicBlogs = async (slug: string) => {
 
-  const response = await request(`/category/${slug}`, {
+  const response = await request(`/categories/${slug}`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",

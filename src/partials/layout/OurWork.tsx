@@ -9,12 +9,12 @@ const OurWork = () => {
     <div className="mx-auto flex h-scree items-center justify-center fixed bottom-16 right-10">
       <div className="group relative cursor-pointer py-2">
         <div className="flex items-center justify-between space-x-5 px-4">
-          <a className="menu-hover bg-gray-100 dark:bg-gray-800/80 rounded-full w-[50px] h-[50px] text-base font-medium text-black flex items-center justify-center">
+          <a className="menu-hover bg-gray-700/10 rounded-full w-[50px] h-[50px] text-base font-medium text-black flex items-center justify-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="40px"
               height="40px"
-              className="dark:text-white text-black mx-auto"
+              className="text-red mx-auto"
               viewBox="0 0 256 256"
             >
               <path

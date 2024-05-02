@@ -53,10 +53,10 @@ const Subscribe = () => {
 
   return (
     <div className="w-full h-[500px] flex items-center justify-center">
-      <div className="flex flex-col items-center gap-14">
-        <div className="flex flex-col items-center gap-4">
+      <div className="flex flex-col items-center gap-10">
+        <div className="flex flex-col items-center gap-3">
           <H1 text="Gelişmelerden Anında Bilgi Alın" />
-          <H4 text="Haftalık yazılarımızı kaçırmamak için abone olun ve her yeni içerik yayınlandığında ilk sizin haberiniz olsun." />
+          <H4 className="!text-passive text-sm w-8/12 text-center" text="Haftalık yazılarımızı kaçırmamak için abone olun ve her yeni içerik yayınlandığında ilk sizin haberiniz olsun." />
         </div>
         <div>
           <form

@@ -69,11 +69,11 @@ const Form = () => {
         method="POST"
         className="flex flex-col space-y-4 h-[79.8vh]"
       >
-        <div className="flex flex-col space-y-2 bg-white dark:bg-black p-10 mx-auto mt-5 rounded-lg w-1/2">
+        <div className="flex flex-col space-y-2 bg-gray-800/40 p-10 mx-auto mt-5 rounded-lg w-1/2">
           <div className="grid grid-cols-1 gap-5 mt-5">
             <div>
               <label
-                className="dark:text-white text-black font-semibold"
+                className="text-white font-semibold"
                 htmlFor="fullName"
               >
                 Full Name
@@ -122,7 +122,7 @@ const Form = () => {
           </div>
 
           <div
-            className={`my-2  rounded-lg ${loading ? "bg-green/70" : "bg-green"
+            className={`my-2  rounded-lg ${loading ? "bg-red/70" : "bg-red"
               }`}
           >
             <button
