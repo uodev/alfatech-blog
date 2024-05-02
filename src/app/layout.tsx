@@ -16,16 +16,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const darkMode: { name: string; value: string } = cookies().get("dark") ?? {
-    name: "dark",
-    value: "",
-  };
+  const theme = cookies().get("theme")?.value.toString() || "hallowen";
 
   return (
-    <html lang="en" className={darkMode.value}>
-      <body
-        className={`bg-background dark:bg-dark-background ${darkMode.value}`}
-      >
+    <html lang="en" data-theme={theme}>
+      <body className="bg-background-color">
         <NextTopLoader color="#FF5480" />
         <div className="w-[1450px] max-xl:w-[900px] m-auto min-h-[100vh]">
           <Navbar />

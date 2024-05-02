@@ -14,7 +14,7 @@ const OurWork = () => {
               xmlns="http://www.w3.org/2000/svg"
               width="40px"
               height="40px"
-              className="text-red mx-auto"
+              className="text-accent mx-auto"
               viewBox="0 0 256 256"
             >
               <path

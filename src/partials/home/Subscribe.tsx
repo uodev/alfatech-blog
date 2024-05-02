@@ -56,7 +56,7 @@ const Subscribe = () => {
       <div className="flex flex-col items-center gap-10">
         <div className="flex flex-col items-center gap-3">
           <H1 text="Gelişmelerden Anında Bilgi Alın" />
-          <H4 className="!text-passive text-sm w-8/12 text-center" text="Haftalık yazılarımızı kaçırmamak için abone olun ve her yeni içerik yayınlandığında ilk sizin haberiniz olsun." />
+          <H4 className="!text-primary-color text-sm w-8/12 text-center" text="Haftalık yazılarımızı kaçırmamak için abone olun ve her yeni içerik yayınlandığında ilk sizin haberiniz olsun." />
         </div>
         <div>
           <form
@@ -73,7 +73,7 @@ const Subscribe = () => {
             <button
               disabled={loading}
               type="submit"
-              className="bg-red absolute right-0 text-white px-8 py-4 rounded-3xl font-semibold text-2xl hover:bg-red hover:text-white transition-colors"
+              className="bg-accent absolute right-0 text-white px-8 py-4 rounded-3xl font-semibold text-2xl hover:bg-accent hover:text-white transition-colors"
             >
               {loading ? "Loading..." : "Subscribe"}
             </button>

@@ -12,7 +12,7 @@ const Navbar = () => {
     <nav className="flex items-center justify-between mb-10 h-24">
       <div className="flex items-center gap-20 max-lg:justify-between max-lg:w-full max-lg:bg-green">
         <Link href={`/`}>
-          <h2 className="font-semibold text-4xl text-white">Alfa<span className="text-red underline">Tech</span></h2>
+          <h2 className="font-semibold text-4xl text-white">Alfa<span className="text-accent underline">Tech</span></h2>
         </Link>
         <ul className="flex gap-16 items-center max-lg:hidden">
           {routes.map((route, index) => {
@@ -20,7 +20,7 @@ const Navbar = () => {
               return (
                 <li key={index}>
                   <Link href={route.path}>
-                    <div className="bg-red !text-white px-4 rounded-xl py-1">
+                    <div className="bg-accent !text-white px-4 rounded-xl py-1">
                       <h4 className="font-semibold text-lg text-white">
                         {route.name}
                       </h4>

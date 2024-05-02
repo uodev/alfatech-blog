@@ -33,7 +33,7 @@ export default async function Home() {
         ))}
       </section>
       <div className="w-full h-96 flex items-center justify-center">
-        <button className="border border-red text-red px-8 py-3 rounded-3xl font-semibold text-2xl hover:bg-red hover:text-white transition-colors">
+        <button className="border border-accent text-accent px-8 py-3 rounded-3xl font-semibold text-2xl hover:bg-accent hover:text-white transition-colors">
           Load More
         </button>
       </div>

@@ -57,7 +57,7 @@ const Form = () => {
     <Fragment>
       {response && response.message !== "" ? (
         <div
-          className={`${response.isSuccess ? "bg-green" : "bg-red"
+          className={`${response.isSuccess ? "bg-green" : "bg-accent"
             } p-3 rounded-xl mt-2 text-white`}
         >
           <p>{response.message}</p>
@@ -122,12 +122,12 @@ const Form = () => {
           </div>
 
           <div
-            className={`my-2  rounded-lg ${loading ? "bg-red/70" : "bg-red"
+            className={`my-2  rounded-lg ${loading ? "bg-accent/70" : "bg-accent"
               }`}
           >
             <button
               disabled={loading}
-              className="uppercase text-sm font-bold tracking-wide bg-blue-900 text-gray-100 p-3 rounded-lg w-full
+              className="uppercase text-sm font-bold tracking-wide bg-primary-color text-gray-100 p-3 rounded-lg w-full
                   focus:outline-none focus:shadow-outline"
             >
               {loading ? "Loading..." : "Submit"}

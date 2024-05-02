@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import Link from "next/link";
 import { Icon } from "@iconify/react";
@@ -17,7 +17,7 @@ const LargeCategoryCard = ({
   return (
     <Link
       href={`/topics/${slug}`}
-      className="bg-white dark:bg-gray-800/40 shadow-md rounded-xl w-[570px] h-[250px] flex flex-col items-center gap-6 px-5 py-10"
+      className="bg-primary-color shadow-md rounded-xl w-[570px] h-[250px] flex flex-col items-center gap-6 px-5 py-10"
     >
       <div className="topic-pages-card-container flex gap-5 w-full">
         <Icon icon={icon} />

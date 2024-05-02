@@ -16,7 +16,7 @@ interface Blog {
 
 const HeroBlogCard = ({ blog }: { blog: Blog }) => {
   return (
-    <article className="w-[1450px] h-[655px] bg-[#17172b]">
+    <article className="w-[1450px] h-[655px] bg-primary-color">
       <Link href={`/article/${blog.blogSlug}`}>
         <div className="flex flex-col items-center justify-center h-[655px] relative">
           <div className="absolute right-0 w-[900px] h-full">
@@ -32,7 +32,7 @@ const HeroBlogCard = ({ blog }: { blog: Blog }) => {
           <div className="bg-[#F5EFE6] w-[600px] h-[600px] flex flex-col gap-10 absolute left-40 px-10 py-28">
             <div>
               <p className="text-[#191919] font-medium tracking-[2px] text-xs z-10">
-                {blog.author.fullname} <span className="text-red">IN</span>{" "}
+                {blog.author.fullname} <span className="text-accent">IN</span>{" "}
                 {blog.category.name}
               </p>
             </div>

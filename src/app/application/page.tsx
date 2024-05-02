@@ -6,7 +6,7 @@ const ApplicationPage = () => {
   return (
     <Fragment>
       <H1 text={"Application Form"} />
-      <div className="bg-red p-3 rounded-xl mt-5 text-gray-950 dark:text-white">
+      <div className="bg-accent p-3 rounded-xl mt-5 text-gray-950 dark:text-white">
         <p>
           Başvurunuz için lütfen aşağıdaki formu doldurunuz. Başvurunuz
           incelendikten sonra{" "}
