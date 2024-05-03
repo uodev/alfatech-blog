@@ -20,6 +20,9 @@ export default function RootLayout({
 
   return (
     <html lang="en" data-theme={theme}>
+      <head>
+        <link rel="icon" href="/favicon.png" />
+      </head>
       <body className="bg-background-color">
         <NextTopLoader color="#FF5480" />
         <div className="w-[1450px] max-xl:w-[900px] m-auto min-h-[100vh]">
