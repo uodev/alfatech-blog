@@ -18,7 +18,8 @@
     "react-dom": "^18",
     "sharp": "^0.33.3",
     "swiper": "^11.1.1",
-    "tw-colors": "^3.3.1"
+    "tw-colors": "^3.3.1",
+    "zustand": "^4.5.2"
   },
   "devDependencies": {
     "@iconify/react": "^4.1.1",

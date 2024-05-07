@@ -25,7 +25,7 @@ const BlogCard = ({ blog }: { blog: Blog }) => {
           className="!no-underline"
         >
           <Image
-            className="object-cover max-lg:w-[780px] select-none"
+            className="object-cover h-[300px] max-lg:w-[780px] select-none"
             src={blog.blogImage}
             alt="post"
             width={780}
@@ -34,7 +34,7 @@ const BlogCard = ({ blog }: { blog: Blog }) => {
             priority
           />
         </Link>
-        <div className="flex flex-col gap-3 w-[330px] h-[40px] px-4 py-2 z-10 bg-background bottom-0 absolute">
+        <div className="w-[330px] h-[40px] px-4 py-2 z-10 bg-background-color bottom-0 absolute">
         </div>
       </div>
       <div className="flex flex-col gap-5">
