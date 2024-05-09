@@ -135,9 +135,10 @@ const NavbarIcons = () => {
                   </p>
                 </div>
               </div>
-              <div className=" absolute -bottom-[99px] left-0 right-0 text-text-color bg-accent/90 py-2 px-5 w-44 rounded-bl-lg rounded-br-lg shadow-md group-hover:visible invisible">
+              <div className=" absolute -bottom-[130px] left-0 right-0 text-text-color bg-accent/90 py-2 px-5 w-44 rounded-bl-lg rounded-br-lg shadow-md group-hover:visible invisible">
                 <ul className="flex flex-col gap-2">
                   <li><Link className="hover:underline" href={"/"}>Profil</Link></li>
+                  <li><Link className="hover:underline" href={"/author/add-article"}>Yazı Oluştur</Link></li>
                   <li><Link className="hover:underline" href={"/"}>Ayarlar</Link></li>
                   <li><Link className="hover:underline" href={"/"}>Çıkış</Link></li>
                 </ul>
