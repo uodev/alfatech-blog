@@ -1,15 +1,12 @@
-import dynamic from "next/dynamic";
+
 import { Fragment } from "react";
 
-const EditorJs = dynamic(() => import("@/components/Editor"), {
-  ssr: false,
-  
-});
 
 const AuthorAddArticlePage = () => {
   return (
     <Fragment>
-      <EditorJs />
+      <h1>Add Article</h1>
+
     </Fragment>
   );
 };
